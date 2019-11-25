@@ -29,6 +29,9 @@ const APP = {
     ev.stopPropagation();
     let link = ev.target;
     let target = link.getAttribute("data-href");
+    //update URL
+    history.pushState({}, target, `${APP.baseURL}#${target}`);
+    //change the display of the "page"
     APP.showPage(target);
     //use switch case with target for page specific things
   },
