@@ -9,7 +9,7 @@ const APP = {
       link.addEventListener("click", APP.nav);
     });
     //get the base url to use in the app
-    APP.baseURL = location.url.split("#")[0];
+    APP.baseURL = location.href.split("#")[0];
     let hash = location.hash;
     //check for current url hash
     if (hash && hash != "#") {
